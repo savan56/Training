@@ -1,0 +1,646 @@
+/*Navigation
+=============*/
+
+header {
+    z-index: 10;
+    background: #000;
+    width: 100%;
+    padding: 20px 0;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+
+header.sticky {
+    position: fixed;
+    width: 100%;
+    background: #000;
+    box-shadow: 3px 1px 0.99px 0.01px rgba(0, 0, 0, 0.05);
+    padding: 15px 0px;
+}
+
+header a.logo img {
+    display: block;
+}
+
+.logo {
+    width: 30%;
+    float: left;
+}
+
+nav {
+    width: 100%;
+    float: left;
+    /*
+	text-align: right;*/
+}
+
+nav ul li {
+    display: inline-block;
+    padding: 0px 0px 0px 48px;
+}
+
+nav ul li a {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 30px;
+    display: block;
+    color: rgba(255, 255, 255, 0.70);
+}
+
+nav ul li a:hover {
+    color: #ff8b38;
+    transition: all 0.5s;
+    text-decoration: none;
+}
+
+
+/*Banner
+=========*/
+
+.banner {
+    background: url('../images/banner.jpg') no-repeat bottom center;
+    background-size: cover;
+    padding: 110px 0 135px;
+}
+
+.banner img {
+    display: block;
+}
+
+.banner h2 {
+    color: #fff;
+    text-align: left;
+    margin-top: 25px;
+}
+
+.banner span.line {
+    margin: 30px 0;
+}
+
+.banner p {
+    color: rgba(255, 255, 255, 0.80);
+    margin-bottom: 35px;
+}
+
+.banner span.line {
+    background: #fff;
+    opacity: 1;
+}
+
+.line {
+    width: 64px;
+    height: 2px;
+    background: #ff8b38;
+    display: block;
+    margin: 30px auto;
+}
+
+.banner a.download {
+    width: 135px;
+    height: 42px;
+    line-height: 40px;
+    border: 2px solid #fff;
+    text-align: center;
+    color: #fff;
+    font-size: 15px;
+    display: block;
+}
+
+.banner a.download:hover {
+    background: #fff;
+    color: #232323;
+    transition: all 0.5s;
+    text-decoration: none;
+}
+
+.banner form {
+    max-width: 360px;
+    width: 100%;
+    float: right;
+    background: #fff;
+    border-radius: 3px;
+    text-align: center;
+}
+
+.banner form h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #333333;
+    background: #f5f5f5;
+    padding: 20px 0;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
+.banner form h3 span {
+    color: #ff9b51;
+}
+
+.banner form input {
+    width: 85%;
+    border: 0;
+    margin-top: 30px;
+    border-bottom: 1px solid #d6d6d6;
+    border-left: 1px solid #fbfbfb;
+    border-right: 1px solid #fbfbfb;
+    padding: 10px;
+    outline: 0;
+}
+
+.banner form input:focus {
+    border-bottom: 1px solid #ff8b38;
+}
+
+.banner form a {
+    background: #ff9b51;
+    color: #fff;
+    display: block;
+    width: 100%;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    margin-top: 50px;
+    padding: 20px 0;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.banner form a:hover {
+    background: #000;
+    transition: all 0.5s;
+    text-decoration: none;
+}
+
+
+/*Social
+===========*/
+
+.social {
+    padding: 20px 0;
+    box-shadow: 0px 1px 0.3px 0px rgba(0, 0, 0, 0.38);
+}
+
+.social h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #000;
+    padding-bottom: 5px;
+}
+
+.rightside {
+    text-align: right;
+}
+
+.social a i {
+    color: #cccccc;
+    padding: 10px 0px 0 40px;
+}
+
+.social a i:hover {
+    color: #ff9b51;
+}
+
+
+/*Accordian
+===========*/
+
+.tabs {
+    width: 100%;
+    display: inline-block;
+}
+
+.tab-links li {
+    margin: 0px 5px;
+    list-style: none;
+}
+
+.tab-links a {
+    width: 112px;
+    height: 112px;
+    line-height: 112px;
+    display: block;
+    background: #333333;
+    border-bottom: 1px solid #fff;
+    font-size: 15px;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+    transition: all linear 0.15s;
+}
+
+.tab-links a:hover {
+    background: #ff8b38;
+    text-decoration: none;
+}
+
+.tab-links li.active a,
+.tab-links li.active a:hover {
+    background: #ff8b38;
+    color: #fff;
+}
+
+
+/*----- Content of Tabs -----*/
+
+.tab {
+    display: none;
+}
+
+.tab.active {
+    display: block;
+}
+
+.accordian {
+    background: #f5f5f5;
+    padding: 145px 0 110px;
+}
+
+.width60 {
+    width: 60%;
+    float: left;
+    padding-left: 50px;
+}
+
+.width40 {
+    width: 40%;
+    float: left;
+    text-align: right;
+}
+
+.accordian h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #000;
+    padding-bottom: 50px;
+}
+
+.accordian p {
+    padding-bottom: 45px;
+}
+
+.width60 a {
+    width: 121px;
+    height: 46px;
+    line-height: 46px;
+    text-align: center;
+    color: #fff;
+    background: #ff8b38;
+    border-radius: 3px;
+    font-size: 15px;
+    display: block;
+}
+
+.width60 a:hover {
+    background: #232323;
+    color: #fff;
+    transition: all 0.5s;
+    text-decoration: none;
+}
+
+
+/*Sub-List
+===========*/
+
+.sublevel1 {
+    padding: 110px 0 120px;
+}
+
+.sublevel1 img,
+.standard img {
+    width: 100%;
+    display: block;
+}
+
+.sublevel1 span.line,
+.standard span.line {
+    margin: 30px 0;
+}
+
+.sublevel1 p {
+    padding-bottom: 35px;
+}
+
+.sublevel1 i {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    border: 2px solid #ff8b38;
+    color: #ff8b38;
+    text-align: center;
+    font-size: 18px;
+}
+
+.sublevel1 h4 {
+    font-size: 14px;
+    line-height: 17px;
+    color: #000;
+    font-weight: 700;
+    padding-bottom: 10px;
+}
+
+
+/*Stander Picture Section
+=========================*/
+
+.standard {
+    background: #f5f5f5;
+    padding: 80px 0;
+}
+
+.standard h3 {
+    padding-top: 50px;
+}
+
+
+/*Aewsome
+=========*/
+
+.awesome {
+    text-align: center;
+    padding: 100px 0;
+}
+
+p.bottom {
+    padding-bottom: 70px;
+}
+
+.awesome i {
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    border-radius: 50%;
+    border: 2px solid #ff8b38;
+    color: #ff8b38;
+    text-align: center;
+    font-size: 30px;
+}
+
+h2 {
+    font-weight: 400;
+    font-family: 'Raleway', sans-serif;
+    font-size: 36px;
+    color: #212121;
+    line-height: 43px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.awesome h3 {
+    padding: 25px 0;
+}
+
+
+/*Slider
+=========*/
+
+.carousel-item img {
+    background-size: cover;
+    width: 100%;
+}
+
+
+/*Contect Form
+==============*/
+
+.contact {
+    padding: 100px 0 80px;
+}
+
+.contact p {
+    text-align: center;
+}
+
+.contact input,
+.contact textarea {
+    width: 100%;
+    border: 0;
+    outline: 0;
+    border-bottom: 1px solid #d6d6d6;
+    margin-bottom: 20px;
+    padding: 13px;
+}
+
+.contact textarea {
+    height: 180px;
+}
+
+.contact a {
+    width: 148px;
+    height: 46px;
+    line-height: 46px;
+    text-align: center;
+    color: #fff;
+    background: #ff8b38;
+    border-radius: 3px;
+    font-size: 15px;
+    display: block;
+    margin: 20px auto 0;
+}
+
+.contact a:hover {
+    background: #232323;
+    color: #fff;
+    transition: all 0.5s;
+    text-decoration: none;
+}
+
+.contact input:focus,
+.contact textarea:focus {
+    border-bottom: 1px solid #ff8b38;
+}
+
+
+/*Footer
+==========*/
+
+footer {
+    padding: 20px 0;
+    background: #000;
+    text-align: center;
+    color: #fff;
+}
+
+footer a i {
+    padding: 0 10px;
+    font-size: 20px !important;
+    color: #fff;
+}
+
+footer a i:hover {
+    color: #ff8b38;
+}
+
+footer p,
+footer p a {
+    color: rgba(255, 255, 255, 0.50);
+    font-size: 12px;
+}
+
+.bottomsocial {
+    margin-bottom: 10px;
+}
+
+footer p a:hover {
+    color: #fff;
+}
+
+
+/* #Media Queries
+================================================== */
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+    .width40 img {
+        width: 100%;
+        display: block;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    h2 {
+        font-size: 24px;
+        line-height: 34px;
+    }
+    .banner {
+        padding: 80px 0 80px;
+    }
+    .social a i {
+        padding: 10px 0px 0 21px;
+    }
+    .accordian {
+        padding: 60px 0;
+    }
+    .width40 img {
+        width: 100%;
+        display: block;
+    }
+    .accordian h3 {
+        font-size: 18px;
+        padding-bottom: 15px;
+    }
+    .sublevel1,
+    .sublevel2,
+    .awesome,
+    .contact {
+        padding: 60px 0;
+    }
+    nav ul li {
+        padding: 5px 0px 5px 0px;
+        text-align: center;
+    }
+}
+
+
+/* All Mobile Sizes (devices and browser) */
+
+@media only screen and (max-width: 767px) {
+    .backcolor {
+        background: #000;
+        position: absolute;
+    }
+    header {
+        padding: 10px 0;
+    }
+    .logo a img {
+        display: block;
+        margin-top: 10px;
+    }
+    .banner img {
+        max-width: 130px;
+        height: auto;
+    }
+    h2 {
+        font-size: 20px;
+        line-height: 30px;
+    }
+    .banner p {
+        margin-bottom: 20px;
+    }
+    .banner span.line {
+        margin: 15px 0;
+    }
+    .banner {
+        padding: 50px 0 30px;
+    }
+    .banner a.download {
+        margin-bottom: 15px;
+    }
+    .rightside {
+        text-align: left;
+    }
+    .social a i {
+        padding: 10px 5px 0 5px;
+        font-size: 2em !important;
+    }
+    .tab-links li {
+        margin: 0px 0px;
+        width: 33.33%;
+        float: left;
+    }
+    .accordian {
+        padding: 40px 0;
+    }
+    .width60 {
+        width: 100%;
+        padding-left: 0;
+    }
+    .width40 {
+        width: 100%;
+        text-align: left;
+    }
+    .width40 img {
+        max-width: 100%;
+        height: auto;
+    }
+    .tab-links a {
+        width: 98%;
+        height: 50px;
+        line-height: 50px;
+    }
+    .accordian h3 {
+        padding-bottom: 20px;
+        font-size: 18px;
+        padding-top: 20px;
+    }
+    .accordian p {
+        padding-bottom: 20px;
+    }
+    .width60 a {
+        margin-bottom: 20px;
+    }
+    .sublevel1 span.line,
+    .sublevel2 span.line {
+        margin: 15px 0;
+    }
+    .sublevel1,
+    .sublevel2,
+    .awesome,
+    .contact {
+        padding: 40px 0;
+    }
+    .sublevel1 p {
+        padding-bottom: 15px;
+    }
+    .sublevel2 h3 {
+        padding-top: 0;
+    }
+    .line {
+        margin: 15px auto;
+    }
+    p.bottom {
+        padding-bottom: 25px;
+    }
+    .awesome h3 {
+        padding: 15px 0;
+    }
+    .awesome i {
+        margin-top: 15px;
+    }
+    .design {
+        min-height: auto;
+        padding: 40px 0;
+    }
+    nav ul li {
+        padding: 5px 0px 5px 0px;
+        text-align: center;
+    }
+}

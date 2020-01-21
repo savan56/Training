@@ -1,0 +1,90 @@
+body
+{
+	background-color: gray;
+	font-family: 'Aclonica';	
+}
+div
+{
+	border: 5px solid black;
+	border-style: groove;
+	height : 230px;
+	background-image: url("../image/img3.jpeg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+h1
+{
+	text-align: center;
+	background-color: aqua;
+}
+h2
+{
+	position: relative;
+	background-color: rosybrown;
+	color: black;
+	border: 1px solid white;
+	right: 0px;
+	float: right;
+}
+span
+{
+	display: inline-block;
+	width: 48%;
+	height: 100px;
+	padding: 5px;
+	margin: 7px;
+	border: 1px solid blue;    
+	background-color: lightgray;
+	text-align: center;
+}
+div.a h1
+{
+	background-color: orange;
+}
+p.c
+{
+	
+	background-color: lightgreen;
+	color: black;
+	height: 100px;
+	width: 48%;
+	border: 2px solid red;
+	right: 0px;
+	float: right;
+	text-align: center;
+	margin: 8px;
+	padding: 5px;
+}
+p.b
+{
+	
+	background-color: lightgreen;
+	color: black;
+	height: 100px;
+	width: 48%;
+	border: 2px solid red;
+	right: 0px;
+	float: left;
+	text-align: center;
+	margin: 8px;
+	padding: 5px;
+}
+div.d h1
+{
+	background-color: lightblue;
+}
+span.e
+{
+	display: block;
+	width: 48%;
+	height: 100px;
+	padding: 5px;
+	margin: 7px;
+	border: 1px solid blue;    
+	background-color: lightpink;
+	text-align: center;
+}
+div.f
+{
+	height : 320px;
+}

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form Validation</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+</head>
+<body>
+
+	<!-- Form area -->
+	<div class="form" >
+		<div class="container">
+			<br>
+			<div class="row">
+				<div class="col-md-8 m-auto d-block">
+					<h1 class="text-success text-center">Registration Form</h1>
+				</div>
+			</div>
+			<br>
+			<div class="row">
+				<div class="col-md-8 m-auto d-block">
+					<form action="#" class="bg-light"  id="Form">
+						
+						<div class="form-group">
+							<label>First Name</label>
+							<input type="text" name="Fname" class="form-control" id="Fname" autocomplete="off" onblur="FnameValidate()">
+							<span id="FnameError" class="text-danger font-weight-bold"></span>
+						</div>
+
+						<div class="form-group">	
+							<label>Last Name</label>
+							<input type="text" name="Lname" class="form-control" id="Lname" autocomplete="off" onblur="LnameValidate()">
+							<span id="LnameError" class="text-danger font-weight-bold"></span>
+						</div>
+
+						<div class="form-group">
+							<label>Address</label>
+							<textarea class="form-control" rows="3" id="Address" name="Address" maxlength="200" placeholder="Enter the textarea input here..(limited to 200 characters)" onblur="AddValidate()"></textarea>
+							<span id='remainingC'></span><br>
+							<span id="AddressError" class="text-danger font-weight-bold"></span>
+						</div>
+
+						<div class="form-group">
+							<label>Password</label>
+							<input type="password" name="Password" class="form-control" id="Password" autocomplete="off" onblur="pwdValidate()" onpaste="return false;">
+							<span id="PasswordError" class="text-danger font-weight-bold"></span>
+						</div>
+
+						<div class="form-group">
+							<label>Confirm Password</label>
+							<input type="password" name="Cpassword" class="form-control" id="Cpassword" autocomplete="off" onblur="cpwdValidate()" onpaste="return false;">
+							<span id="CpasswordError" class="text-danger font-weight-bold"></span>
+						</div>
+
+						<div class="form-group">
+							<label>Email Address</label>
+							<input type="text" name="email" class="form-control" id="Email" autocomplete="off" onblur="emailValidate()">
+							<span id="EmailError" class="text-danger font-weight-bold"></span>
+						</div>
+
+						<div class="form-group">
+							<label>Contact No.</label>
+							<input type="text" name="contact" class="form-control" id="Contact" autocomplete="off" onblur="conValidate()">
+							<span id="ContactError" class="text-danger font-weight-bold"></span>
+						</div>
+
+						<div class="form-group">
+							<label>Uplode File</label>
+    						<input type="file" class="form-control-file" id="File" onchange="fileValidate(this)">
+    						<span id="FileError" class="text-danger font-weight-bold"></span>
+						</div>
+
+						<div class="form-group"> 
+							<label>Gender</label>
+							<div class="form-check">
+								<input class="form-check-input" type="radio" name="gender" id="male" value="male" checked>
+								<label class="form-check-label" >
+									Male
+								</label>
+							</div>
+							<div class="form-check">
+								<input class="form-check-input" type="radio" name="gender" id="female" value="female">
+								<label class="form-check-label" >
+									Female
+								</label>
+							</div>
+						</div>
+
+						<!-- <input type="submit" name="Register" value="submit" class="btn btn-success" form="Form" id="btn-submit"> -->
+						<button type="submit" name="Register" value="submit" class="btn btn-success" form="Form" id="btn-submit" onclick="return validation()">
+							Register
+						</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Script -->
+	<script type="text/javascript" src="js/jquery-3.2.1.slim.min.js"></script>
+	<script type="text/javascript" src="js/popper.min.js"></script>
+	<script type="text/javascript" src="js/valid.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			var len = 0;
+			var maxchar = 200;
+
+			$( '#Address' ).keypress(function(){
+				len = this.value.length
+				if(len > maxchar){
+					return false;
+				}
+				else if (len > 0) {
+					$( "#remainingC" ).html( "Remaining characters: " +( maxchar - len ) );
+				}
+				else {
+					$( "#remainingC" ).html( "Remaining characters: " +( maxchar ) );
+				}
+			})
+		});
+	</script>
+	
+</body>
+</html>

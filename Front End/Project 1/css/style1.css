@@ -1,0 +1,146 @@
+/* external css: flickity.css */
+
+* {
+    box-sizing: border-box;
+}
+
+
+/* body {
+    font-family: sans-serif;
+} */
+
+.carousel {
+    background: transparent;
+}
+
+.carousel-cell {
+    margin-right: 20px;
+    overflow: hidden;
+}
+
+.carousel-cell img {
+    display: block;
+    height: 200px;
+    width: 600px;
+    position: relative;
+}
+
+.carousel-cell video {
+    display: block;
+    height: 400px;
+    width: 671px;
+    position: relative;
+}
+
+.flickity-page-dots {
+    bottom: -20px;
+}
+
+
+/* Button
+========== */
+
+.button {
+    font-size: 22px;
+}
+
+
+/* Static banner
+================ */
+
+.static-banner {
+    position: absolute;
+    z-index: 1;
+    padding: 2px 20px;
+    font-size: 26px;
+    color: white;
+    pointer-events: none;
+}
+
+.static-banner1 {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+/* modal popup
+============== */
+
+label {
+    color: gray;
+    font-size: 14px;
+    font-weight: bolder;
+}
+
+
+/* Preview
+=========== */
+
+#preview img,
+video {
+    height: 100px;
+    width: 130px;
+    margin-left: 20px;
+    margin-right: 5px;
+}
+
+#preview i {
+    float: right;
+    margin: 35px 30px auto;
+    color: red;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+
+/* Media queary
+=============== */
+
+@media screen and ( max-width: 2561px) {
+    .carousel-cell img {
+        height: 400px;
+    }
+}
+
+@media screen and ( max-width: 768px) {
+    .carousel-cell img {
+        height: 400px;
+    }
+}
+
+@media screen and ( max-width: 426px) {
+    .carousel-cell img {
+        height: 300px;
+    }
+    .carousel-cell video {
+        height: 300px;
+    }
+    .slider {
+        height: 485px;
+    }
+}
+
+@media screen and ( max-width: 376px) {
+    .carousel-cell img {
+        height: 275px;
+    }
+    .carousel-cell video {
+        height: 275px;
+    }
+    .slider {
+        height: 460px;
+    }
+}
+
+@media screen and ( max-width: 321px) {
+    .carousel-cell img {
+        height: 200px;
+    }
+    .carousel-cell video {
+        height: 200px;
+    }
+    .slider {
+        height: 380px;
+    }
+}
